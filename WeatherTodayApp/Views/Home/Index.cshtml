@@ -1,0 +1,11 @@
+﻿@{
+    if (Session["UEmail"] != null)
+    {
+        Response.Redirect("~/Weather/ViewAllCityWeatherList");
+    }
+    else
+    {
+        Response.Redirect("~/User/LoginUser");
+    }
+
+}

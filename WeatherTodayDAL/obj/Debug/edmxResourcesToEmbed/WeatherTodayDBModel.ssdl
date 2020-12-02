@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeatherDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_First_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_Last_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_Emaild" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeatherDetails">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Temperature" Type="numeric" Precision="3" Scale="1" Nullable="false" />
+    <Property Name="Humidity" Type="int" Nullable="false" />
+    <Property Name="Visibility" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="GETALLCITYWEATHER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GETWEATHERBYCITY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CITY" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="WeatherDBModelStoreContainer">
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeatherDetails" EntityType="Self.WeatherDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

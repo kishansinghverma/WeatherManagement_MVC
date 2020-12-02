@@ -1,0 +1,12 @@
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\WeatherTodayDAL.dll.config
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\WeatherTodayDAL.dll
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\WeatherTodayDAL.pdb
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\EntityFramework.dll
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\EntityFramework.xml
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\obj\Debug\WeatherTodayDAL.csprojAssemblyReference.cache
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\obj\Debug\WeatherTodayDAL.csproj.CoreCompileInputs.cache
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\obj\Debug\WeatherTodayDAL.csproj.CopyComplete
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\obj\Debug\WeatherTodayDAL.dll
+C:\Users\kisha\source\repos\WeatherTodaySolution\WeatherTodayDAL\obj\Debug\WeatherTodayDAL.pdb

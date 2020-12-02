@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeatherDBModelStoreContainer" CdmEntityContainer="WeatherDBEntities">
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="WeatherDBModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetails">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="User_First_Name" ColumnName="User_First_Name" />
+          <ScalarProperty Name="User_Last_Name" ColumnName="User_Last_Name" />
+          <ScalarProperty Name="User_Emaild" ColumnName="User_Emaild" />
+          <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeatherDetails">
+      <EntityTypeMapping TypeName="WeatherDBModel.WeatherDetail">
+        <MappingFragment StoreEntitySet="WeatherDetails">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GETALLCITYWEATHER" FunctionName="WeatherDBModel.Store.GETALLCITYWEATHER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WeatherDBModel.GETALLCITYWEATHER_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GETWEATHERBYCITY" FunctionName="WeatherDBModel.Store.GETWEATHERBYCITY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WeatherDBModel.GETWEATHERBYCITY_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

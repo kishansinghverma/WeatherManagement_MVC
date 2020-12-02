@@ -1,0 +1,10 @@
+﻿@{
+    if (Session["UEmail"] != null)
+    {
+        Layout = "~/Views/Shared/_Session_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Default_Layout.cshtml";
+    }
+}

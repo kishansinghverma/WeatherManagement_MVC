@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "SearchWeatherByCity";
+}
+
+<h2>Search Weather By City</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Raw("<br><br>")
+    <label style="display: inline">Enter City Name</label>
+    @Html.Raw("&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;")
+    @Html.TextBox("CityName", "", new { @required = "required", @class = "form-control", @style = "display: inline;" });
+    @Html.Raw("&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;")
+    <input type="submit" value="Search" class="btn btn-primary" style="display:inline" />
+}

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeatherDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeatherDetail">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Temperature" Type="Decimal" Precision="3" Scale="1" Nullable="false" />
+    <Property Name="Humidity" Type="Int32" Nullable="false" />
+    <Property Name="Visibility" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WeatherDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+    <EntitySet Name="WeatherDetails" EntityType="Self.WeatherDetail" />
+    <FunctionImport Name="GETALLCITYWEATHER" ReturnType="Collection(WeatherDBModel.GETALLCITYWEATHER_Result)" />
+    <FunctionImport Name="GETWEATHERBYCITY" ReturnType="Collection(WeatherDBModel.GETWEATHERBYCITY_Result)">
+      <Parameter Name="CITY" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GETALLCITYWEATHER_Result">
+    <Property Type="Int32" Name="CityID" Nullable="false" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Temperature" Nullable="false" Precision="3" Scale="1" />
+    <Property Type="Int32" Name="Humidity" Nullable="false" />
+    <Property Type="Int32" Name="Visibility" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GETWEATHERBYCITY_Result">
+    <Property Type="Int32" Name="CityID" Nullable="false" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Temperature" Nullable="false" Precision="3" Scale="1" />
+    <Property Type="Int32" Name="Humidity" Nullable="false" />
+    <Property Type="Int32" Name="Visibility" Nullable="false" />
+  </ComplexType>
+</Schema>

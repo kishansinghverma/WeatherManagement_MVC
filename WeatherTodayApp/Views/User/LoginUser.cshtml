@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Login User";
+}
+
+<h2>Login User</h2>
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Email ID</td>
+            
+            <td>@Html.TextBox("UEmail", null, new { @required = "required", @type="email" })</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.Password("Password", null, new { @required= "required", @type="password"})</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+        <tr>
+            <td style="color:red;font-size:14px;">@ViewBag.Err</td>
+        </tr>
+    </table>
+}
+
